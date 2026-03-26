@@ -17,7 +17,7 @@ class _ExpensesState extends State<Expenses>{
       title: "Ginos Pizza",
       amount:25.00,
       date: DateTime.now(),
-      category: Category.food,
+      category: Category.food,   
     ),
     Expense(
       title: "Amtrack Ticket",
