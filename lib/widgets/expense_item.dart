@@ -14,9 +14,23 @@ class ExpenseItem extends StatelessWidget{
           horizontal: 20,
           vertical: 16,
 
-
         ),
-        child: Text(expense.title),
+        child: Column( 
+          children: [
+            Text(expense.title), // text box at the top of the col
+            const SizedBox(height:4), // a little space betwween first row of the col and the second
+            Row(children: [
+              Text('\$${expense.amount.toStringAsFixed(2)}'),
+              Spacer(), // spacer o push everything else over to the right
+              Row(children:[ //cat and date closely grouped, so another row in this row
+                const Icon(Icons.alarm),
+                const SizedBox(width:8),
+                Text(expense.date.toString()) // fix date to not look bad
+              ])
+
+            ])
+          ]
+        )
       ),
     );
   }
