@@ -21,11 +21,11 @@ class ExpenseItem extends StatelessWidget{
             const SizedBox(height:4), // a little space betwween first row of the col and the second
             Row(children: [
               Text('\$${expense.amount.toStringAsFixed(2)}'),
-              Spacer(), // spacer o push everything else over to the right
+              Spacer(), // spacer to push everything else over to the right
               Row(children:[ //cat and date closely grouped, so another row in this row
-                const Icon(Icons.alarm),
+                Icon(categoryIcons[expense.category]),
                 const SizedBox(width:8),
-                Text(expense.date.toString()) // fix date to not look bad
+                Text(expense.formattedDate) // fix date to not look bad
               ])
 
             ])
