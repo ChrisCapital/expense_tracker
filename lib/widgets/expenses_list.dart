@@ -1,6 +1,7 @@
 
 import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
+import 'package:expense_tracker/widgets/expense_item.dart';
 
 class ExpensesList extends StatelessWidget{
   const ExpensesList({super.key, required this.expenses});
@@ -11,7 +12,7 @@ class ExpensesList extends StatelessWidget{
     
     return ListView.builder( //build each item that appears on screen as you scroll
       itemCount : expenses.length,
-      itemBuilder: (ctx,index)=> Text(expenses[index].title)
+      itemBuilder: (ctx,index)=> ExpenseItem(expense: expenses[index]),
     );
   }
 }
