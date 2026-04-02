@@ -13,6 +13,7 @@ class Expenses extends StatefulWidget{
 }
 
 class _ExpensesState extends State<Expenses>{
+
   final List<Expense> _registeredExpenses = [
     Expense(
       title: "Ginos Pizza",
@@ -30,6 +31,17 @@ class _ExpensesState extends State<Expenses>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(
+        title: const Text("Expense Tracker"),
+        actions: [
+      IconButton(icon:const Icon(Icons.add),
+      onPressed:(){
+
+      },
+      )
+     ],
+  ),
+  
       body: Column(
         children: [
           const Text("Chart goes here..."),
