@@ -16,8 +16,10 @@ class ExpenseItem extends StatelessWidget{
 
         ),
         child: Column( 
+          crossAxisAlignment:CrossAxisAlignment.start, // align everything to the left
           children: [
-            Text(expense.title), // text box at the top of the col
+            Text(expense.title,
+            style:Theme.of(context).textTheme.titleLarge), // text box at the top of the col
             const SizedBox(height:4), // a little space betwween first row of the col and the second
             Row(children: [
               Text('\$${expense.amount.toStringAsFixed(2)}'),
